@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "574390183656",
+    "firebase_url": "https://miniproject-ebf96.firebaseio.com",
+    "project_id": "miniproject-ebf96",
+    "storage_bucket": "miniproject-ebf96.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:574390183656:android:cd76cef7fad5113a9c4b5d",
+        "android_client_info": {
+          "package_name": "com.phoneflutter.example"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "574390183656-ip0pp0m8o9u316st48h5et0s9rj6vdne.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.phoneflutter.example",
+            "certificate_hash": "01f621b24bcf0f7b38df661f049f8d1863927a4c"
+          }
+        },
+        {
+          "client_id": "574390183656-e70j9o8n4al81bfq54m39ilh8ro05iq4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCcJRjwpTFBjrKNQkNaVl8q1_rIHTHgrSk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "574390183656-e70j9o8n4al81bfq54m39ilh8ro05iq4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

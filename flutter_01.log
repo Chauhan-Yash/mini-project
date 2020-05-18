@@ -1,0 +1,95 @@
+Flutter crash report; please file at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter run
+
+## exception
+
+StateError: Bad state: Cannot add new events after calling close
+
+```
+#0      _BroadcastStreamController.add (dart:async/broadcast_stream_controller.dart:251:24)
+#1      _AdbLogReader._onLine (package:flutter_tools/src/android/android_device.dart:948:26)
+#2      _rootRunUnary (dart:async/zone.dart:1134:38)
+#3      _CustomZone.runUnary (dart:async/zone.dart:1031:19)
+#4      _CustomZone.runUnaryGuarded (dart:async/zone.dart:933:7)
+#5      _BufferingStreamSubscription._sendData (dart:async/stream_impl.dart:338:11)
+#6      _BufferingStreamSubscription._add (dart:async/stream_impl.dart:265:7)
+#7      _SinkTransformerStreamSubscription._add (dart:async/stream_transformers.dart:70:11)
+#8      _EventSinkWrapper.add (dart:async/stream_transformers.dart:17:11)
+#9      _StringAdapterSink.add (dart:convert/string_conversion.dart:238:11)
+#10     _LineSplitterSink._addLines (dart:convert/line_splitter.dart:152:13)
+#11     _LineSplitterSink.addSlice (dart:convert/line_splitter.dart:127:5)
+#12     StringConversionSinkMixin.add (dart:convert/string_conversion.dart:165:5)
+#13     _SinkTransformerStreamSubscription._handleData (dart:async/stream_transformers.dart:122:24)
+#14     _rootRunUnary (dart:async/zone.dart:1134:38)
+#15     _CustomZone.runUnary (dart:async/zone.dart:1031:19)
+#16     _CustomZone.runUnaryGuarded (dart:async/zone.dart:933:7)
+#17     _BufferingStreamSubscription._sendData (dart:async/stream_impl.dart:338:11)
+#18     _BufferingStreamSubscription._add (dart:async/stream_impl.dart:265:7)
+#19     _SinkTransformerStreamSubscription._add (dart:async/stream_transformers.dart:70:11)
+#20     _EventSinkWrapper.add (dart:async/stream_transformers.dart:17:11)
+#21     _StringAdapterSink.add (dart:convert/string_conversion.dart:238:11)
+#22     _StringAdapterSink.addSlice (dart:convert/string_conversion.dart:243:7)
+#23     _Utf8ConversionSink.addSlice (dart:convert/string_conversion.dart:314:20)
+#24     _Utf8ConversionSink.add (dart:convert/string_conversion.dart:307:5)
+#25     _ConverterStreamEventSink.add (dart:convert/chunked_conversion.dart:74:18)
+#26     _SinkTransformerStreamSubscription._handleData (dart:async/stream_transformers.dart:122:24)
+#27     _rootRunUnary (dart:async/zone.dart:1134:38)
+#28     _CustomZone.runUnary (dart:async/zone.dart:1031:19)
+#29     _CustomZone.runUnaryGuarded (dart:async/zone.dart:933:7)
+#30     _BufferingStreamSubscription._sendData (dart:async/stream_impl.dart:338:11)
+#31     _BufferingStreamSubscription._add (dart:async/stream_impl.dart:265:7)
+#32     _SyncStreamControllerDispatch._sendData (dart:async/stream_controller.dart:766:19)
+#33     _StreamController._add (dart:async/stream_controller.dart:642:7)
+#34     _StreamController.add (dart:async/stream_controller.dart:588:5)
+#35     _Socket._onData (dart:io-patch/socket_patch.dart:1831:41)
+#36     _rootRunUnary (dart:async/zone.dart:1138:13)
+#37     _CustomZone.runUnary (dart:async/zone.dart:1031:19)
+#38     _CustomZone.runUnaryGuarded (dart:async/zone.dart:933:7)
+#39     _BufferingStreamSubscription._sendData (dart:async/stream_impl.dart:338:11)
+#40     _BufferingStreamSubscription._add (dart:async/stream_impl.dart:265:7)
+#41     _SyncStreamControllerDispatch._sendData (dart:async/stream_controller.dart:766:19)
+#42     _StreamController._add (dart:async/stream_controller.dart:642:7)
+#43     _StreamController.add (dart:async/stream_controller.dart:588:5)
+#44     new _RawSocket.<anonymous closure> (dart:io-patch/socket_patch.dart:1379:33)
+#45     _NativeSocket.issueReadEvent.issue (dart:io-patch/socket_patch.dart:899:14)
+#46     _microtaskLoop (dart:async/schedule_microtask.dart:43:21)
+#47     _startMicrotaskLoop (dart:async/schedule_microtask.dart:52:5)
+#48     _runPendingImmediateCallback (dart:isolate-patch/isolate_patch.dart:118:13)
+#49     _RawReceivePortImpl._handleMessage (dart:isolate-patch/isolate_patch.dart:175:5)
+```
+
+## flutter doctor
+
+```
+[32m[✓][39m Flutter (Channel stable, v1.12.13+hotfix.7, on Microsoft Windows [Version 10.0.18362.720], locale en-US)
+    [32m•[39m Flutter version 1.12.13+hotfix.7 at C:\src\flutter
+    [32m•[39m Framework revision 9f5ff2306b (2 months ago), 2020-01-26 22:38:26 -0800
+    [32m•[39m Engine revision a67792536c
+    [32m•[39m Dart version 2.7.0
+
+[32m[✓][39m Android toolchain - develop for Android devices (Android SDK version 29.0.2)
+    [32m•[39m Android SDK at C:\Users\asus\AppData\Local\Android\sdk
+    [32m•[39m Android NDK location not configured (optional; useful for native profiling support)
+    [32m•[39m Platform android-29, build-tools 29.0.2
+    [32m•[39m Java binary at: C:\Program Files\Android\Android Studio\jre\bin\java
+    [32m•[39m Java version OpenJDK Runtime Environment (build 1.8.0_202-release-1483-b03)
+    [32m•[39m All Android licenses accepted.
+
+[32m[✓][39m Android Studio (version 3.5)
+    [32m•[39m Android Studio at C:\Program Files\Android\Android Studio
+    [32m•[39m Flutter plugin version 42.1.1
+    [32m•[39m Dart plugin version 191.8593
+    [32m•[39m Java version OpenJDK Runtime Environment (build 1.8.0_202-release-1483-b03)
+
+[32m[✓][39m VS Code (version 1.43.2)
+    [32m•[39m VS Code at C:\Users\asus\AppData\Local\Programs\Microsoft VS Code
+    [32m•[39m Flutter extension version 3.9.0
+
+[32m[✓][39m Connected device (1 available)
+    [32m•[39m SM G615F • 4200d2dcc66b9427 • android-arm • Android 8.1.0 (API 27)
+
+[32m•[39m No issues found!
+```
